@@ -67,7 +67,7 @@ class sample(speaker, student):
 
 s = sample("Tim", 25, 80, 4, "Python")
 print('sample class的mro表为：',sample.mro())
-s.speak()
-super(sample, s).speak()
-super(speaker, s).speak()
+# s.speak()
+# super(sample, s).speak()
+# super(speaker, s).speak()
 super(student, s).speak()

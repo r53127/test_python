@@ -10,6 +10,7 @@ def log(text):
         return wrapper
     return decorator
 
+
 @log('execute')
 def now(a):
     print(a)

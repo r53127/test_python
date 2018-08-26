@@ -105,3 +105,28 @@ else:
             print('Students:', Student.count)
             print('测试通过!')
 
+
+class Father(object):
+    def __init__(self, name):
+        self.name = name
+        print('father is running')
+        print("father'name is: %s" % (self.name))
+
+    def getName(self):
+        return 'Father ' + self.name
+
+
+class Son(Father):
+    def __init__(self, name):
+        super(Son, self).__init__(name)
+        print("hi,Son is running!")
+        self.name = name
+
+    def getName(self):
+        return 'Son name is : ' + self.name
+
+
+if __name__ == '__main__':
+    son = Son('bob')
+    print(son.getName())
+

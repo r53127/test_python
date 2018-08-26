@@ -1,64 +1,10 @@
-class Base(object):
+from enum import Enum
 
+a = Enum('Month', ('Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'))
 
-    def __init__(self):
-
-
-        print("enter Base")
-
-
-        print("leaveBase")
-
-
-
-
-
-class A(Base):
-
-
-    def __init__(self):
-
-
-        print("enterA")
-
-
-        super(A,self).__init__()
-
-
-        print("leaveA")
-
-
-
-
-
-class B(Base):
-
-
-    def __init__(self):
-
-
-        print("enterB")
-
-
-        super(B,self).__init__()
-
-
-        print("leaveB")
-
-
-
-
-
-class C(A,B):
-
-
-    def __init__(self):
-
-
-        print("enterC")
-
-
-        super(C,self).__init__()
-
-
-        print("leave C")
+for name, member in a.__members__.items():
+    print(name)
+    print(member)
+    print(a.__members__)
+    print(name, '=>', member, ',', member.value)
+    print((member))
